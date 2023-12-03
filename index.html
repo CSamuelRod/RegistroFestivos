@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creador de PDFs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="containerDatos">
+        <h3>Formulario datos</h3>
+        <div class="tablaInserts">
+            <table>
+                <tbody>
+                    <tr>
+                        <th><label for="trabajadora">Trabajadora</label></th>
+                        <td><input type="text" id="trabajadora"></td>
+                    </tr>
+                    <tr>
+                        <th><label for="diaFestivo">Día Festivo</label></th>
+                        <td><input type="text" id="diaFestivo"></td>
+                    </tr>
+                    <tr>
+                        <th><label for="mes">Mes</label></th>
+                        <td><input type="text" id="mes"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="botonDisplay">
+                <input id="add-data" 
+                type="submit" 
+                value="Añadir datos" 
+                onclick="accionUsuario(event)">
+            </div>
+        </div>
+        <div class="tablaDatos" id="table-alumno">
+            <h3>Lista Registros</h3>
+            <table  id="tableAlumnos">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Trabajadora</th>
+                        <th>Día Festivo</th>
+                        <th>Mes</th>
+                        <th>ACCIONES</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        <div class="botonDisplay">
+            <input id="btn-genera-pdf" 
+            type="submit" 
+            value="Generar pdf"
+            onclick="generarPDF(event)">
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.debug.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.19/jspdf.plugin.autotable.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
